@@ -1,17 +1,19 @@
 @log in
 
-Given <username> and <password>
-When username and password are validated 
+Given I have a valid <username> and <password>
+When I enter the details and click on log in
 Then successful login
 And display home page
 
-Given <username> and <password>
-When username and password are not validated
+Given i have a invalid <username> and <password>
+When i enter the username and password and click log in
 Then Error message is displayed
 
 @product selection
 
-Given Product is displayed
-When Product is selected 
-Then Add the product to the Cart
+Given i have loggen in the website
+And  I am displayed Product page
+When I click on the add button under Product 
+Then product is selected 
+And  the product is added to the Cart
 
